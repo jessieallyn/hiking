@@ -1,0 +1,8 @@
+* {
+  font-family:Georgia, 'Times New Roman', Times, serif
+}
+
+@media print {
+  app-root > * { display: none; }
+  app-root app-print-layout { display: block; }
+}

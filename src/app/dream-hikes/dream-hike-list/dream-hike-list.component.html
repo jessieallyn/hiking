@@ -1,0 +1,11 @@
+
+  <div class="row">
+  <div class="col-xs-12">
+    <app-dream-hike-item
+    *ngFor="let hike of dreamHikes;
+    let i=index"
+    [hike]="hike"
+    [index]="i"s
+    ></app-dream-hike-item>
+  </div>
+</div>
