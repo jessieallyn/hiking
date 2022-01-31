@@ -1,0 +1,14 @@
+{
+  "targets": {
+    "hiking-notebook-7eecd": {
+      "hosting": {
+        "hiking": [
+          "hiking-notebook-7eecd"
+        ]
+      }
+    }
+  },
+  "projects": {
+    "default": "hiking-notebook-7eecd"
+  }
+}

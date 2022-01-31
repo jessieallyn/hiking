@@ -1,24 +1,23 @@
 <nav class="navbar navbar-default">
   <div class="container-fluid">
     <div class="navbar-header">
-      <a href="#" class="navbar-brand">Hiking Notebook</a>
+      <button type="button"
+        class="navbar-toggle"
+        data-toggle="collapse"
+        data-target="#myNavbar"
+        (click)="collapsed=!collapsed">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="#">Hiking Notebook</a>
     </div>
-
-    <div class="collapse navbar-collapse">
+    <div class="collapse navbar-collapse" id="myNavbar" [class.collapse]="collapsed">
       <ul class="nav navbar-nav">
-        <li routerLinkActive="active"><a routerLink="/hikes">Hiking Memories</a></li>
-        <li routerLinkActive="active"><a routerLink="/dream-hikes">Dream Hikes</a></li>
+        <!-- <li class="active"><a href="#">Home</a></li> -->
+        <li><a routerLink="/hikes">Hiking Memories</a></li>
+        <li><a routerLink="/dream-hikes">Dream Hikes</a></li>
       </ul>
-      <!-- <ul class="nav navbar-nav navbar-right">
-        <li class="dropdown" appDropdown>
-          <a style="cursor: pointer;" class="dropdown-toggle" role="button">Manage <span class="caret"></span></a>
-          <ul class="dropdown-menu">
-            <li><a style="cursor:pointer;">Save Data</a></li>
-            <li><a style="cursor: pointer;">Fetch Data</a></li>
-          </ul>
-        </li>
-      </ul> -->
     </div>
   </div>
 </nav>
-

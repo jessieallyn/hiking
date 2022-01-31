@@ -5,5 +5,6 @@ import { Component, OnInit } from '@angular/core';
   templateUrl: './header.component.html'
 })
 export class HeaderComponent {
+  collapsed: boolean = true;
 
 }

@@ -18,6 +18,7 @@ import { ListComponent } from './print-layout/list/list.component';
 import { DreamHikeListComponent } from './dream-hikes/dream-hike-list/dream-hike-list.component';
 import { DreamHikeItemComponent } from './dream-hikes/dream-hike-list/dream-hike-item/dream-hike-item.component';
 import { DreamHikeAddComponent } from './dream-hikes/dream-hike-add/dream-hike-add.component';
+import { MapComponent } from './map/map.component';
 
 @NgModule({
   declarations: [
@@ -35,6 +36,7 @@ import { DreamHikeAddComponent } from './dream-hikes/dream-hike-add/dream-hike-a
     DreamHikeListComponent,
     DreamHikeItemComponent,
     DreamHikeAddComponent,
+    MapComponent,
 
     ],
   imports: [

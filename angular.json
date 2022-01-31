@@ -108,6 +108,16 @@
               "src/**/*.html"
             ]
           }
+        },
+        "deploy": {
+          "builder": "@angular/fire:deploy",
+          "options": {
+            "prerender": false,
+            "ssr": false,
+            "browserTarget": "hiking:build:production",
+            "firebaseProject": "hiking-notebook-7eecd",
+            "firebaseHostingSite": "hiking-notebook-7eecd"
+          }
         }
       }
     }

@@ -1,20 +1,26 @@
-<h1>Dream Hikes:</h1>
+<!-- <h1 *ngIf="">Dream Hikes:</h1>
+<h1>Enter a dream hike!</h1> -->
 <div class="row">
   <div class="col-md-5">
     <!-- dream hikes list goes here -->
+    <!-- <h3 style="text-align-last: center;">{{ message }}</h3> -->
     <router-outlet></router-outlet>
-    <!-- button to print list -->
-    <!-- <button class="btn button-primary">Print List</button> -->
   </div>
   <div class="col-md-7">
-    <app-dream-hike-add></app-dream-hike-add>
     <!-- add dream hikes functionality goes here -->
-    <!-- need to add a form that has location, hike name, and image url -->
+    <app-dream-hike-add></app-dream-hike-add>
   </div>
 </div>
 <hr>
 <div class="row">
   <div class="col-md-12">
+    <!-- button to print list -->
+    <!-- <button class="btn button-primary">Print List</button> -->
+  </div>
+</div>
+<div class="row">
+  <div class="col-md-12">
     <!-- map goes here with pins of all the hike locations  -->
+    <app-map></app-map>
   </div>
 </div>

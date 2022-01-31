@@ -6,6 +6,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./dream-hikes.component.css']
 })
 export class DreamHikesComponent implements OnInit {
+  
 
   constructor() { }
 
