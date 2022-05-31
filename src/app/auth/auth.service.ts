@@ -9,6 +9,8 @@ import { environment } from 'src/environments/environment';
 export interface AuthResponseData {
   idToken: string;
   email: string;
+  firstName: string;
+  lastName: string;
   refreshToken: string;
   expiresIn: string;
   localId: string;
@@ -41,6 +43,8 @@ export class AuthService {
         this.handleAuthentication(
           resData.email,
           resData.localId,
+          resData.firstName,
+          resData.lastName,
           resData.idToken,
           +resData.expiresIn
         );
@@ -52,6 +56,8 @@ export class AuthService {
     const userData: {
       email: string;
       id: string;
+      firstName: string;
+      lastName: string;
       _token: string;
       _tokenExpirationDate: string;
     } = JSON.parse(localStorage.getItem('userData'));
@@ -62,6 +68,8 @@ export class AuthService {
     const loadedUser = new User(
       userData.email,
       userData.id,
+      userData.firstName,
+      userData.lastName,
       userData._token,
       new Date(userData._tokenExpirationDate)
       );
@@ -95,11 +103,13 @@ export class AuthService {
   private handleAuthentication(
     email: string,
     userId: string,
+    firstName: string,
+    lastName: string,
     token: string,
     expiresIn: number
     ) {
     const expirationDate = new Date(new Date().getTime() + expiresIn * 1000);
-    const user = new User(email, userId, token, expirationDate);
+    const user = new User(email, userId, firstName, lastName, token, expirationDate);
     this.user.next(user);
     localStorage.setItem('userData', JSON.stringify(user));
   }
